@@ -18,9 +18,8 @@ function cameraStart() {
         })
 }
 
-
 //Take the picture when the camera is tapped
-cameraTrigger.onClick = function () {
+function takePicture() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext('2d').drawImage(cameraView, 0, 0);
@@ -29,6 +28,7 @@ cameraTrigger.onClick = function () {
     console.log('picture taken!')
 
 }
+cameraTrigger.addEventListener('click',takePicture)
 
 
 window.addEventListener("load", cameraStart, false);
