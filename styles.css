@@ -46,3 +46,6 @@ html,body{
     right: 20px;
     z-index: 2;
 }
+.download{
+    text-decoration: none;
+}
