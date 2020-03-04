@@ -4,8 +4,14 @@ const cameraView = document.querySelector('#camera--view');
 const cameraOutput = document.querySelector('#camera--output');
 const cameraSensor = document.querySelector('#camera--sensor');
 const cameraTrigger = document.querySelector('#camera--trigger');
-
+//TODO 
+//Check if the user has a cam or enabled usage of cam
+// add changing functionality of facingmode
 //Camera init
+var getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia;
 function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
